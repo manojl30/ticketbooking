@@ -7,8 +7,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms'
 })
 export class RegisterComponent implements OnInit {
   users:Loginvalidation[]=[
-    {'firstname':''}
-
+    {'firstname':'manoj','username':'manojmanu','emailid':'manoj.l@heraizen.com','orgname':'heraizen','password':'manu@123','confirmpassword':'manu@123'}
   ]
   loginForm:FormGroup;
   constructor(private fb:FormBuilder) { }
