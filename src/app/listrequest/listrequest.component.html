@@ -1,0 +1,109 @@
+<app-logheader></app-logheader>
+<div class="container-fluid">
+    <div class="col-md-12 col-xl-12 col-xs-12 col-lg-12 col-sm-12">
+        <form>
+            <div class="form-row align-items-center">
+                <div class="col-md-2 col-xl-2 col-xs-2 col-lg-2 col-sm-2 mr-5">
+                    <h5 class="mt-2"><b>Status</b></h5>
+                    <select class="custom-select">
+                        <option value="All">All</option>
+                        <option value="Open">Open</option>
+                        <option value="In progress">In progress</option>
+                        <option value="Assigned">Assigned</option>
+                        <option value="Closed">Closed</option>
+                    </select>
+                </div>
+                <div class="col-md-2 col-xl-2 col-xs-2 col-lg-2 col-sm-2 mr-5">
+                    <h5 class="mt-2"><b>Module</b></h5>
+                    <select class="custom-select">
+                        <option value="Application">Application</option>
+                        <option value="Server">Server</option>
+                        <option value="Sprint data MongoDB">Sprint data MongoDB</option>
+                    </select>
+                </div>
+                <div class="col-md-4 col-xl-4 col-xs-4 col-lg-4 col-sm-4 margin">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search by Module Name">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text"><i class="fa fa-search"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-xl-3 col-3 col-lg-3 col-sm-3">
+                    <button type="button" class="btn btncolor margin float-right"><a routerLink="../ticketrequest">
+                        <h5><i class="fa fa-plus-circle"></i>&nbsp;<b>New Ticket Request</b></h5></a>
+                    </button>
+                </div>
+            </div>
+        </form>
+        <hr class="dottedline">
+    </div>
+    <h4 class="text-center py-3"><b>List Organization Ticket Request</b></h4>
+    <table class="table" [svData]="list" #sv="svDataTable" [svRowsOnPage]="10" svSortOrder="asc">
+        <thead class="thead-light">
+            <th><b>SL #</b></th>
+            <th><b>Problem Statement</b></th>
+            <th><b>Module</b></th>
+            <th><b>Priority</b></th>
+            <th><b>Status</b></th>
+            <th><b>Additional</b></th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let team of sv.data;index as i">
+                <td>{{i+1}}</td>
+                <td>{{team.problem}}</td>
+                <td>{{team.module}}</td>
+                <td *ngIf="team.priority=='High'">
+                    <button class="btn" id="highcolor">
+                        {{team.priority}}
+                    </button>
+                </td>
+                <td *ngIf="team.priority=='Medium'">
+                    <button class="btn" id="mediumcolor">
+                        {{team.priority}}
+                    </button>
+                </td>
+                <td *ngIf="team.priority=='Low'">
+                    <button class="btn" id="lowcolor">
+                        {{team.priority}}
+                    </button>
+                </td>
+                <td *ngIf="team.status=='Open'">
+                    <p class="text-info">
+                        {{team.status}}
+                    </p>
+                </td>
+                <td *ngIf="team.status=='In progress'">
+                    <p class="text-warning">
+                        {{team.status}}
+                    </p>
+                </td>
+                <td *ngIf="team.status=='Assigned'">
+                    <p class="text-primary">
+                        {{team.status}}
+                    </p>
+                </td>
+                <td *ngIf="team.status=='closed'">
+                    <p class="text-success">
+                        {{team.status}}
+                    </p>
+                </td>
+                <td *ngIf="team.status=='Closed'">
+                    <p class="text-success">
+                        {{team.status}}
+                    </p>
+                </td>
+                <td><a routerLink="../ticketissue">More...</a></td>
+            </tr>
+        </tbody>
+        <tfoot>
+
+            <td colspan="6">
+                <p class="float-right">
+                    <sv-bootstrap-paginator></sv-bootstrap-paginator>
+                </p>
+            </td>
+        </tfoot>
+    </table>
+</div>

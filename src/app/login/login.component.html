@@ -1,0 +1,52 @@
+<app-header></app-header>
+<div class="container">
+    <div class="col-md-8 col-xs-8 col-lg-8 col-xl-8 col-sm-8 offset-md-2 offset-sm-2 offset-xl-2 offset-lg-2 offset-xs-2 mt-5">
+        <header class="form-header text-center">
+            <img src="./assets/laptop.png" alt="logo">
+        </header>
+        <div class="container" id="bgcolor">
+            <div class="ml-3 mr-3">
+                <form>
+                    <h3 class="text-center mt-4 mb-5" id="idlogin">LOGIN</h3>
+                    <div class="form-group">
+                        <label>
+                            <h5>Username or Email ID</h5>
+                        </label>
+                        <input type="email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <h5>Password</h5>
+                        </label>
+                        <input type="password" class="form-control">
+                    </div>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input">
+                        <label class="form-check-label">
+                            <h5>Remember me</h5>
+                        </label>
+                        <label class="float-right">
+                            <a routerLink="forgotpassword">
+                                <h5><u>Forgot your password?</u></h5>
+                            </a>
+                        </label>
+                    </div>
+                    <div class="text-center col-md-6 col-xs-6 col-lg-6 col-xl-6 col-sm-6 offset-md-3 offset-xs-3 offset-lg-3 offset-xl-3 offset-sm-3">
+                        <p>
+                            <a routerLink="../listrequest"><button type="submit" class="btn btn-success btn-block mt-4">
+                                    <h3 class="text-white">Login</h3>
+                                </button></a>
+                        </p>
+
+                        <p>
+                            <a routerLink="register"> <button type="submit" class="btn btn-primary btn-block mt-4">
+                                    <h3 class="text-white">Register Now</h3>
+                                </button></a>
+                        </p>
+                        <p>&nbsp;</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

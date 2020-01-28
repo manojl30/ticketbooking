@@ -1,0 +1,74 @@
+<app-header></app-header>
+<ol class="breadcrumb bg-white">
+    <li class="mr-2"><img src="./assets/small laptop 2.png" alt="logo"></li>
+    <li class="breadcrumb-item px-1" id="ticket">Ticketing System</li>
+    <li class="breadcrumb-item">New Ticket Request</li>
+    <div class="col-md-12 offset-md-11">
+        <li>
+            <a routerLink="/">
+                <h5><i class="fas fa-less-than"></i>&nbsp; Back
+                </h5>
+            </a>
+        </li>
+    </div>
+</ol>
+<div class="container">
+    <div class="col-md-8 offset-md-2 mt-5">
+        <header class="form-header text-center">
+            <img src="./assets/laptop.png" alt="logo">
+        </header>
+        <div class="container" id="idpadding">
+            <form>
+                <div class="text-center mt-5 mb-3">
+                    <h3 class="padding">New Ticket Request</h3>
+                </div>
+                <div class="form-group px-3">
+                    <label>
+                        <h5 class="text-success">Problem Statement<em>&nbsp;*</em></h5>
+                    </label>
+                    <textarea type="problemstatement" class="form-control"></textarea>
+                </div>
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="form-group col-md-6 py-3">
+                            <label>
+                                <h5 class="text-success">Select Module<em>&nbsp;*</em></h5>
+                            </label>
+                            <select class="custom-select" name="selectmodule">
+                                <option value="">Select</option>
+                                <option value="Application">Application</option>
+                                <option value="Server">Server</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6 py-3">
+                            <label>
+                                <h5 class="text-success">Priority<em>&nbsp;*</em></h5>
+                            </label>
+                            <select class="custom-select" name="selectmodule">
+                                <option value="">Select</option>
+                                <option value="Low">Low</option>
+                                <option value="Medium">Medium</option>
+                                <option value="High">High</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group py-3">
+                        <label>
+                            <h5 class="text-success">Description(Guidelines & Conditions)<em>&nbsp;*</em></h5>
+                        </label>
+                        <ckeditor [editor]="Editor" data=" " class="text-gap"></ckeditor>
+
+
+                    </div>
+                </div>
+
+                <a routerLink="listrequest"><button type="submit" class="btn btn-danger mt-3 ml-3 float-right"><i
+                    class="fa fa-refresh text-white">&nbsp;Reset</i></button></a>
+                <a routerLink="../listrequest"> <button type="submit" class="btn btn-primary mt-3 float-right"><i
+                        class="fas fa-check text-white">&nbsp;Submit</i></button></a>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+            </form>
+        </div>
+    </div>

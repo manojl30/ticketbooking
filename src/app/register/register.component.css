@@ -1,0 +1,21 @@
+#idcolor {
+    color: red;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+#idpadding {
+    background-color: #DEEDF9;
+    margin-top: -105px;
+}
+
+* {
+    color: #00303f;
+}
+
+div {
+    border-radius: 3%;
+}

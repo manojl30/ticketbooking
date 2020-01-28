@@ -1,0 +1,28 @@
+em {
+    color: red;
+}
+
+* {
+    color: #00303f;
+}
+
+textarea {
+    height: 90px;
+}
+
+#idpadding {
+    background-color: #DEEDF9;
+    margin-top: -140px;
+}
+
+.padding {
+    padding-top: 100px;
+}
+
+#ticket {
+    color: #af473c;
+}
+
+div {
+    border-radius: 3%;
+}

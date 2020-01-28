@@ -1,0 +1,33 @@
+.btncolor {
+    background-color: #f2f8fc;
+    border: 1px solid black;
+}
+
+.dottedline {
+    background-color: #fff;
+    border-top: 2px dashed #8c8b8b;
+}
+
+#highcolor {
+    background-color: #af473c;
+}
+
+#mediumcolor {
+    background-color: #e59332;
+}
+
+#lowcolor {
+    background-color: #1d8da4;
+}
+
+* {
+    color: #00303f;
+}
+
+.margin {
+    margin-top: 35px;
+}
+
+div {
+    border-radius: 3%;
+}
