@@ -12,5 +12,9 @@ export class TicketrequestComponent implements OnInit {
 
   ngOnInit() {
   }
-
+OnClick(problem,modules,priority){
+  localStorage.setItem("problem",JSON.stringify(problem.value));
+  localStorage.setItem("problem",JSON.stringify(modules.value));
+  localStorage.setItem("problem",JSON.stringify(priority.value));
+}
 }

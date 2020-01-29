@@ -26,7 +26,7 @@
                     <label>
                         <h5 class="text-success">Problem Statement<em>&nbsp;*</em></h5>
                     </label>
-                    <textarea type="problemstatement" class="form-control"></textarea>
+                    <textarea type="problemstatement" class="form-control" #problem></textarea>
                 </div>
                 <div class="col-md-12">
                     <div class="row">
@@ -34,7 +34,7 @@
                             <label>
                                 <h5 class="text-success">Select Module<em>&nbsp;*</em></h5>
                             </label>
-                            <select class="custom-select" name="selectmodule">
+                            <select class="custom-select" name="selectmodule" #modules>
                                 <option value="">Select</option>
                                 <option value="Application">Application</option>
                                 <option value="Server">Server</option>
@@ -44,7 +44,7 @@
                             <label>
                                 <h5 class="text-success">Priority<em>&nbsp;*</em></h5>
                             </label>
-                            <select class="custom-select" name="selectmodule">
+                            <select class="custom-select" name="selectmodule" #priority>
                                 <option value="">Select</option>
                                 <option value="Low">Low</option>
                                 <option value="Medium">Medium</option>
@@ -64,8 +64,8 @@
 
                 <a routerLink="listrequest"><button type="submit" class="btn btn-danger mt-3 ml-3 float-right"><i
                     class="fa fa-refresh text-white">&nbsp;Reset</i></button></a>
-                <a routerLink="../listrequest"> <button type="submit" class="btn btn-primary mt-3 float-right"><i
-                        class="fas fa-check text-white">&nbsp;Submit</i></button></a>
+                <button type="submit" class="btn btn-primary mt-3 float-right" (click)="OnClick(problem,modules,priority)"><i
+                        class="fas fa-check text-white">&nbsp;Submit</i></button>
                 <p>&nbsp;</p>
                 <p>&nbsp;</p>
                 <p>&nbsp;</p>

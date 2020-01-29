@@ -12,9 +12,10 @@ list:Listrequest[]=[];
 
   ngOnInit() {
     this.listreguestService.getlistofrequest().subscribe(res=>{
-      console.log(res);
       this.list=res;
-      console.log(this.list);
+      let data=localStorage.getItem("problem");
+      localStorage.getItem("modules");
+      localStorage.getItem("priority");
     })
   }
 
