@@ -87,3 +87,12 @@ legend.scheduler-border {
 div {
     border-radius: 3%;
 }
+
+.padding {
+    background-color: #DEEDF9;
+    margin-top: -143px;
+}
+
+h4.padding {
+    padding-top: 100px;
+}

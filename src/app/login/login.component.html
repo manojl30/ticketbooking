@@ -10,22 +10,25 @@
                     <h3 class="text-center mt-4 mb-5" id="idlogin">LOGIN</h3>
                     <div class="form-group">
                         <label>
-                            <h5>Username or Email ID</h5>
+                            <h5>Email ID</h5>
                         </label>
                         <input type="text" class="form-control" formControlName="email" [ngClass]="{'is-invalid':submitted}">
                         <div *ngIf="email.invalid && (email.dirty || email.touched)">
-                            <span class="text-danger" *ngIf="email.errors.required">Email / Username is required</span>
+                            <span class="text-danger" *ngIf="email.errors.email">Enter valid Email id</span>
+                            <span class="text-danger" *ngIf="email.errors.required">Email is required</span>
+                            <span class="text-danger" *ngIf="email.errors.mustMatch">Email not matched</span>
+
                         </div>
                     </div>
                     <div class="form-group">
                         <label>
                             <h5>Password</h5>
                         </label>
-                        <input type="text" class="form-control" formControlName="password" [ngClass]="{'is-invalid': submitted}">
+                        <input type="password" class="form-control" formControlName="password" [ngClass]="{'is-invalid': submitted}">
                         <div *ngIf="password.invalid && (password.dirty || password.touched)">
-                            <span class="text-danger" *ngIf="email.errors.required">Password is required</span>
+                            <span class="text-danger" *ngIf="password.errors.required">Password is required</span>
+                            <span class="text-danger" *ngIf="password.errors.minlength">Must have atlest 6 characters</span>
                         </div>
-
                     </div>
                     <div class="form-group form-check">
                         <input type="checkbox" class="form-check-input">
@@ -40,9 +43,9 @@
                     </div>
                     <div class="text-center col-md-6 col-xs-6 col-lg-6 col-xl-6 col-sm-6 offset-md-3 offset-xs-3 offset-lg-3 offset-xl-3 offset-sm-3">
                         <p>
-                            <a routerLink="../listrequest"><button type="submit" class="btn btn-success btn-block mt-4" [disabled]="logForm.invalid">
+                            <button type="submit" class="btn btn-success btn-block mt-4" (click)="OnClick(email.value,password.value)" [disabled]="logForm.invalid">
                                     <h3 class="text-white">Login</h3>
-                                </button></a>
+                                </button>
                         </p>
 
                         <p>

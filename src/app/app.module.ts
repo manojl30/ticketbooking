@@ -16,6 +16,7 @@ import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms'
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,7 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms'
     TicketrequestComponent,
     TicketissueComponent,
     ListrequestComponent,
-    LogheaderComponent,
+    LogheaderComponent
     
   ],
   imports: [
@@ -36,7 +37,8 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms'
     DataTableModule,
     CKEditorModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]

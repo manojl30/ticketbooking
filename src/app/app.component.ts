@@ -9,4 +9,7 @@ import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 export class AppComponent {
   title = 'TicketBooking';
   public Editor = ClassicEditor;
-}
+  public data:any=[]
+  
+     
+  }
