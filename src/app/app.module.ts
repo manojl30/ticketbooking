@@ -13,6 +13,7 @@ import { HttpClientModule} from '@angular/common/http';
 import { DataTableModule} from 'ng-angular8-datatable';
 import { LogheaderComponent } from './logheader/logheader.component';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms'
 
 
 @NgModule({
@@ -33,7 +34,9 @@ import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
     AppRoutingModule,
     HttpClientModule,
     DataTableModule,
-    CKEditorModule
+    CKEditorModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
