@@ -8,16 +8,22 @@ import { ListreguestService } from '../listreguest.service';
 })
 export class ListrequestComponent implements OnInit {
 list:Listrequest[]=[];
+problem:any;
+modules:any;
+priority:any;
   constructor(private listreguestService:ListreguestService) { }
 
   ngOnInit() {
     this.listreguestService.getlistofrequest().subscribe(res=>{
       this.list=res;
-      let data=localStorage.getItem("problem");
-      localStorage.getItem("modules");
-      localStorage.getItem("priority");
-    })
+    });
+    this.gedata();
   }
-
+  gedata(){
+    this.problem=JSON.parse(localStorage.getItem("problem"));
+    this.modules=JSON.parse(localStorage.getItem("modules"));
+    this.priority=JSON.parse(localStorage.getItem("priority")); 
+  }
 }
+
 
