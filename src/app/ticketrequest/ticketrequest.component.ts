@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-ticketrequest',
@@ -8,13 +9,14 @@ import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 })
 export class TicketrequestComponent implements OnInit {
   public Editor = ClassicEditor;
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit() {
   }
+
 OnClick(problem,modules,priority){
-  localStorage.setItem("problem",JSON.stringify(problem.value));
-  localStorage.setItem("problem",JSON.stringify(modules.value));
-  localStorage.setItem("problem",JSON.stringify(priority.value));
-}
+  localStorage.setItem("problem",JSON.stringify(problem));
+  localStorage.setItem("modules",JSON.stringify(modules));
+  localStorage.setItem("priority",JSON.stringify(priority));
+  this.router.navigateByUrl('listrequest');}
 }
